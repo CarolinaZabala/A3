@@ -1,0 +1,101 @@
+package main;
+import view.CadastroUsuarioView;
+//import dao.LivroDAO;
+//import model.Livro;
+import dao.UsuarioDAO;
+import model.Usuario;
+//import dao.EmprestimoDAO;
+//import model.Emprestimo;
+import java.time.LocalDate;
+
+import view.LoginView;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        if (usuarioDAO.existeUsuario()) {
+            new LoginView();
+        } else {
+            new CadastroUsuarioView();
+        }
+    }
+}
+
+
+
+        //Usuario usuario = new Usuario();
+
+        // usuario.setNomeCompleto("Samuel rodrigues");
+        //usuario.setCpf("123.456.789-00");
+        // usuario.setEmail("samuel@gmail.com");
+        // usuario.setCargo("Bibliotecario");
+        // usuario.setLogin("admin");
+        // usuario.setSenha("123");
+        // usuario.setPerfil("Administrador");
+
+        // UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+        // usuarioDAO.cadastrar(usuario);
+///  boolean logado =
+        //  usuarioDAO.login("admin", "123");
+
+        //  if (logado) {
+
+        // System.out.println("Login realizado! ");
+        // } else {
+
+        //  System.out.println("Login invalido! ");
+        // }
+
+
+        // Livro livro = new Livro();
+
+        //livro.setId(1);
+
+        // livro.setTitulo("Dom Casmurro Atualizado");
+        // livro.setAutor("Machado de Assis");
+        // livro.setIsbn("123456");
+        // livro.setCategoria("Romance");
+        // livro.setDisponivel(true);
+
+        //  LivroDAO dao = new LivroDAO();
+
+        //  dao.cadastrar(livro);
+        // dao.listar();
+        // dao.deletar(1);
+        // dao.atualizar(livro);
+
+
+        // Emprestimo emprestimo =
+        //  new Emprestimo();
+
+        //  emprestimo.setUsuarioId(1);
+
+        // emprestimo.setLivroId(4);
+
+        // emprestimo.setDataEmprestimo(
+        //    LocalDate.now()
+        //  );
+
+        // emprestimo.setDataDevolucao(
+        //     LocalDate.now().plusDays(7)
+        //    );
+
+        //  EmprestimoDAO emprestimoDAO =
+        //    new EmprestimoDAO();
+
+        // emprestimoDAO.realizarEmprestimo(
+        //       emprestimo
+
+        // );
+
+        // emprestimoDAO.devolverLivro(4);
+
+        // emprestimoDAO.calcularMulta(LocalDate.now().minusDays(5));
+
+
+
+
